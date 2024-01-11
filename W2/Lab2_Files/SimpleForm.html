@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+  <h2>HTML Forms Exercise</h2>
+
+  <p>
+
+    <label>Name:
+
+      <input name="name" type="text" size="25">
+
+    </label>
+
+  </p>
+
+  <!-- <textarea> creates a multiline textbox
+   multi line comment 
+
+-->
+
+
+
+  <p><label>Comments:
+
+      <textarea name="comments" rows="4" cols="36">Enter comments here</textarea>
+
+    </label></p>
+
+  <!-- <input type = "password"> inserts a textbox with asterisk characters -->
+
+  <p><label>E-mail Address:
+
+      <input name="email" type="password" size="25">
+
+    </label></p>
+
+  <fieldset>
+    <legend>About Your Course</legend>
+    <p>
+
+      <strong>Things you liked: </strong>
+
+    <table>
+      <tr>
+        <td><label>Site design <input name="thingsliked" type="checkbox" value="Design"></label>
+        </td>
+        <td>
+          <label>Links <input name="thingsliked" type="checkbox" value="Links"></label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Ease of use <input name="thingsliked" type="checkbox" value="Ease"></label>
+        </td>
+
+        <td><label>Images <input name="thingsliked" type="checkbox" value="Images"></label></td>
+      </tr>
+      <tr>
+        <td>
+          <label>Source code <input name="thingsliked" type="checkbox" value="Code"></label>
+        </td>
+        <td><label>Teacher <input name="thingsliked" type="checkbox" value="teacher"></label></td>
+
+    </table>
+    </p>
+
+  </fieldset>
+
+  <!-- <input type = "radio"> creates a radio -->
+  <fiedlset style=" background-color:lightgray;">
+    <legend style="font-weight: bold;">Our Site</legend>
+    <p>
+      <strong>How did you get to our site?:</strong>
+      <label>Search engine <input name="hoetosite" type="radio" value="search engine" checked></label>
+
+      <label>Links from another site <input name="hoetosite" type="radio" value="link"></label>
+
+      <label>deitel.com Web site <input name="hoetosite" type="radio" value="deitel.com"></label>
+
+      <label>Refence in a book <input name="hoetosite" type="radio" value="book"></label>
+
+      <label>Other <input name="hoetosite" type="radio" value="other"></label>
+
+
+    </p>
+  </fiedlset>
+  <p>
+    <label>Rate our site:
+
+      <!-- the <select> tag presents a drop-down list with choices indicated by the <option> tags -->
+
+      <select name="rating">
+
+        <option selected>Amazing</option>
+        <option>10</option>
+        <option>9</option>
+        <option>8</option>
+        <option>7</option>
+        <option>6</option>
+        <option>5</option>
+        <option>4</option>
+        <option>3</option>
+        <option>2</option>
+        <option>1</option>
+        <option>Awful</option>
+
+      </select>
+
+    </label>
+
+  </p>
+
+</body>
+
+</html>
