@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>HTML Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -60,10 +60,9 @@
             <td>Row 2, Cell 3</td>
         </tr>
     </table>
-
-    <form>
-        <fieldset>
-            <legend>Login form: </legend>
+    <fieldset>
+        <legend>Login </legend>
+        <form method="POST">         
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -74,8 +73,10 @@
             <textarea id="message" name="message" rows="4" cols="50" required></textarea>
 
             <input type="submit" value="Submit">
-        </fieldset>
-    </form>
+
+        </form>
+    </fieldset>
+
 </body>
 
 </html>
