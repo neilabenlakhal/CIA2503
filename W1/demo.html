@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>HTML Example</title>
 </head>
+
 <body>
     <h1>This is a Heading 1</h1>
     <p>This is a paragraph. It contains <a href="https://www.example.com">a link</a> to an example website.</p>
@@ -25,7 +27,7 @@
     <blockquote>This is a blockquote. It's used to emphasize or quote text.</blockquote>
 
     <h5>This is a Heading 5</h5>
-    <hr>
+    <hr />
     <p>This is a horizontal rule, also known as a thematic break.</p>
 
     <h6>This is a Heading 6</h6>
@@ -40,9 +42,9 @@
 
     <img src="image.jpg" alt="An example image">
 
-    <table border = "1">
+    <table border="1">
         <tr>
-            <th>Header 1</th>    
+            <th>Header 1</th>
             <th>Header 2</th>
             <th>Header 3</th>
         </tr>
@@ -59,16 +61,20 @@
     </table>
 
     <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <fieldset>
+            <legend>Login form: </legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
 
-        <input type="submit" value="Submit">
+            <input type="submit" value="Submit">
+        </fieldset>
     </form>
 </body>
+
 </html>
