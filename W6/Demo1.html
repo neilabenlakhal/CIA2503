@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #id1 {
+            color: blue;
+            font-family: "Times New Roman", Times, serif;
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="id1">My Heading 1</h1>
+    <h2 id="id2" onclick="document.getElementById('id2').style.color='red';">My second heading</h1>
+
+    <button id="btn" type="button" 
+    onclick="const element = document.getElementById('id1').style;
+    const e2 = document.getElementById('id1').style;
+    element.color = 'green';
+    element.fontFamily = 'times';
+    element.fontSize='40px'
+    element.backgroundColor='gray';e2.color='red';"
+
+onmousedown="document.getElementById('btn').style.backgroundColor='green'" 
+onmouseup="this.style.backgroundColor=''
+
+
+">
+        Click Me!</button>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    var StartProgram = function()
+    {
+    var sum = 0.0;
+    var gradeInput;
+    var grade;
+    var classSize = 10;
+   	var counter = 1;     
+   
+ while(counter<=classSize)
+    {
+        gradeInput = window.prompt("Enter student grade");      
+        grade = parseFloat(gradeInput);        
+        sum = sum + grade;        
+        counter++;    
+    }        
+    var averageGrade = sum/classSize;            
+     document.getElementById("paragraph1").innerHTML= "Student Average Grade " + averageGrade;       
+     }
+    </script>   
+</head>
+<body onload="StartProgram()">    
+    <p id="paragraph1">
+    This content will be replaced
+    </p>       
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Placement Examples</title>
+    <!-- Internal JavaScript inside script tags in the head -->
+    <script>
+        function changeText() {
+            var txt = window.prompt("give me any text");
+            document.getElementById("demo").innerHTML = txt;   
+        }
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript Placement Examples</h1>
+
+    <!-- Inline JavaScript (Inside HTML Tags) -->
+    <h2>Inline JavaScript</h2>
+    <p>Click the button below to say hello:</p>
+    <button onclick="window.alert('Hello! (Inline JavaScript)')">Say Hello</button>
+
+    <!-- internal JavaScript inside a script tag -->
+    <script>
+        var message = "Hello, World! (Inline JavaScript)";
+    </script>
+
+    <!-- Internal JavaScript (Inside <script> Tags in the <head>) -->
+    <h2>Internal JavaScript</h2>
+    <p>Click the button below to change the text:</p>
+    <button onclick="changeText()">Change Text</button>
+    <p id="demo">This is a paragraph.</p>
+
+    <!-- External JavaScript (Separate .js File) -->
+    <h2>External JavaScript</h2>
+    <p>Click the button below to say hello (external_code.js):</p>
+    <button onclick="sayHelloExternal()">Say Hello (External JS)</button>
+
+    <!-- Include an external JavaScript file -->
+    <script src="external_code.js"></script>
+</body>
+
+</html>

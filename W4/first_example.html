@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example</title>
+    <script src="external.js"></script>
+</head>
+<body>
+    <h1>Simple JavaScript Example</h1>
+    <!-- Initial message using document.write -->
+    <script>
+        document.write('<p id="demo">This is a simple example.</p>');
+    </script>
+
+    <!-- Button to trigger the event -->
+    <button id="changeTextButton" onclick="changeText()">Change Text</button>
+    
+    <!-- Button to prompt for user input -->
+    <button id="promptButton" onclick="promptUser()">Prompt User</button>
+
+    <!-- Internal script to attach an event listener -->
+    <script>
+        // Function to change the text content of the paragraph
+        function changeText() {
+            // Get the paragraph element by its ID
+            var demoElement = document.getElementById("demo");
+            
+            // Change the text content using innerHTML
+            demoElement.innerHTML = "Text changed using JavaScript!";
+        }
+
+        // Function to prompt the user for input and display it using alert
+        function promptUser() {
+            // Use window.prompt to get user input
+            var userInput = window.prompt("Enter something:");
+
+            // Check if the user provided input
+            if (userInput !== null) {
+                // Display the user's input using window.alert
+                window.alert("You entered: " + userInput);
+            }
+        }
+    </script>
+</body>
+</html>

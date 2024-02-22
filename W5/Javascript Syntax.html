@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id= "myDiv">welcome to JavaScript</p>
+<script>
+ /*The window.alert method is used to display an alert box in your browser. 
+It takes a string as an argument and displays it in the alert box.
+ */
+ window.alert("Hello, World!");
+ /* document innerHTML
+The innerHTML property is used to get or set the HTML content of an element. 
+You can use this property to dynamically change the content of an HTML element.
+
+For example: */
+
+var element = document.getElementById("myDiv");
+element.innerHTML = "Hello, World!";
+
+/* Variables:
+In JavaScript, variables are declared using the var, let, or const keywords. 
+The syntax for declaring a variable is: 
+
+var variableName = value;
+let variableName = value;
+const variableName= value; // cannot be changed
+
+var v = 10; //type Number
+v = "web"; //type string
+v= true;// type is boolean
+let l = 10;
+l = 4.5;//type float
+var a=3.7;
+const e = 30; // will always be equal to 30
+
+/* Control statements are used to make decisions based on conditions in your code. 
+The two most commonly used control statements in JavaScript are if...else and switch.
+ */
+    let f = 10;
+    if (f > 5) {
+       window.alert("f is greater than 5");
+    } else {
+       window.alert("f is not greater than 5");
+    }
+
+/*  Loops are used to repeat a block of code a certain number of times. 
+The two most commonly used loops in JavaScript are for and while loops.
+ */
+
+ for (let i = 0; i < 3; i++) {
+  document.write(i+"<br/>");
+}
+
+/* An array is a collection of elements that can be of different data types,
+ including numbers, strings, and objects. 
+ To create an array, you use square brackets and separate the elements with commas.
+ */
+
+ let table = [1, "hi", 3, 4, 5];
+document.write(table[2]); // Output: 3
+table[2] = "four"; //String
+document.write(table[2]);//output four
+
+</script>
+</body>
+</html>

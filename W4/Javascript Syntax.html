@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id= "myDiv"></p>
+
+<script>
+
+/* Window.alert()
+The window.alert method is used to display an alert box in your browser. 
+It takes a string as an argument and displays it in the alert box.
+ */
+
+ window.alert("Hello, World!");
+
+ /* document innerHTML
+The innerHTML property is used to get or set the HTML content of an element. 
+You can use this property to dynamically change the content of an HTML element.
+
+For example: */
+
+let element = document.getElementById("myDiv");
+element.innerHTML = "Hello, World! <br/>";
+
+/* Variables:
+In JavaScript, variables are declared using the var, let, or const keywords. 
+The syntax for declaring a variable is: 
+
+var variableName = value;
+let variableName = value;
+const variableName= value;
+
+ var is function scoped and its value can be changed after it is declared. 
+
+let is block scoped and also allows you to change its value, 
+but you can't declare a let variable with the same name in the same scope. 
+const is also block scoped, but its value cannot be changed after it is declared.
+
+
+*/
+var a=3.7;
+var b=2;
+//a ="hi";
+var c = 10;
+let d = 20;
+const e = 30;
+
+document.write(a*b);
+element.innerHTML=a*b; 
+/* Control statements are used to make decisions based on conditions in your code. 
+The two most commonly used control statements in JavaScript are if...else and switch.
+ */
+
+    let f = 1;
+    if (f > 5) {
+   document.write("f is greater than 5");
+    } else {
+        document.write("f is not greater than 5"+"<br/>");
+    }
+
+    let x=10; //Undefined
+        switch (x) {
+            case 10:
+            document.write("<h4>x is 10</h4><br/>");
+                break;
+            case 20:
+            document.write("x is 20"+"<br/>");
+                break;
+            default:
+            document.write("x is not 10 or 20"+"<br/>");
+        }
+
+/*  Loops are used to repeat a block of code a certain number of times. 
+The two most commonly used loops in JavaScript are for and while loops.
+ */
+
+ for (let i = 0; i < 3; i++) {
+    document.write(i+"<br/>");
+}
+
+document.write("let's test while"+"<br/>")
+let i = 0;
+while (i < 2) {
+    document.write(i+"<br/>");
+  i++;
+}
+
+/* An array is a collection of elements that can be of different data types,
+ including numbers, strings, and objects. 
+ To create an array, you use square brackets and separate the elements with commas.
+ */
+
+ let table = [1, 2, 3, 4, "five", 7.9];
+ document.write(table[2]+"<br/>"); // Output: 3
+table[2] = "four"; //String
+document.write(table[2]+"<br/>");
+
+/* Date Objects
+JavaScript has a built-in Date object that can be used to work with dates and times.
+ To create a new Date object, you use the new keyword followed by the Date constructor.
+ */
+
+ let today = new Date();
+ document.write(today+"<br/>"); 
+
+var dd=225;
+document.write(Math.sqrt(dd)+"<br/>");
+
+
+
+
+</script>
+</body>
+</html>

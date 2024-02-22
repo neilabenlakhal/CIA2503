@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--   Consider the code written in JavaScript.
+   Complete the missing code that will calculate 
+   the average of 2 numbers using a function call. 
+   Define a function to calculate the average return a result.
+    The function should accept 2 arguments /parameter values.-->
+    <head>
+  <meta charset="utf-8">
+  <title>Lab5</title>
+  <script>
+    var startProgram = function () {
+      var x = parseFloat(window.prompt("enter first number"));
+      var y = parseFloat(window.prompt("enter second number: "));
+      var average = calAverage(x, y);  
+      document.getElementById("paragraph1").innerHTML = average;
+    } //end start program function 
+
+    function calAverage(a, b) { //function declaration
+      var result = (a + b) / 2;
+      return result;
+    }
+  </script>
+  <!--html comment -->
+</head>
+
+<body onload="startProgram()">JavaScript Calculator<br/>
+  
+  <p id="paragraph1">This content will be replaced.</p>
+    
+</body>
+
+</html>

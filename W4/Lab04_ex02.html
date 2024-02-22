@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    var StartProgram = function()
+    {
+        var gradeInput = window.prompt("Enter student grade");
+        var grade = parseFloat(gradeInput); //convert to float from String
+ 
+        if(grade<60.0)
+        {   document.getElementById ("paragraph1").innerHTML = "Apply for a Make up";}        
+        else
+        {document.getElementById("paragraph1").innerHTML = " Well done you have passed";}
+       }
+    </script>   
+</head>
+<body onload="StartProgram()">
+    <h1>Hello world!"</h1>    
+    <p id="paragraph1">Replace content </p>
+
+</body>
+</html>

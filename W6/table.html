@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Table Row</title>
+    <style>
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #myTable th,
+        #myTable td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+
+        function addRow() {
+            var course = window.prompt('enter course name:');
+            var code = window.prompt('enter course code:');
+            document.getElementById('myTable').innerHTML +=
+                '<tr><td>' + course + '</td><td>' + code + '</td></tr>';
+
+
+        }
+
+        function changeColor()
+        {
+        //capture my element 
+        const table= document.getElementById("myTable").style;
+         table.color="blue";
+         table.backgroundColor="pink";
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Table Example</h2>
+
+    <table id="myTable" border="1">
+        <tr>
+            <th>course</th>
+            <th>code</th>
+        </tr>
+        <tr>
+            <td>web dev</td>
+            <td>CIA2503</td>
+        </tr>
+        <tr>
+            <td>OO prog.</td>
+            <td>CIA3503</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <button onclick="addRow();">Add Row</button>
+    <button onclick="changeColor();">change style</button>
+
+</body>
+
+</html>
