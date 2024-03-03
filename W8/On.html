@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $("p").toggle();
+            });
+
+            $(".btn1").dblclick(function () {
+                $("p").toggle();
+            });
+            $(".btn2").click(function () {
+                $("h2").toggle();
+            });
+            $(".btn3").click(function () {
+                $("#test").toggle();
+            });
+            $("input").focus(function () {
+                $(this).css("background-color", "lightblue");
+                $(this).css("color", "red");
+                $(this).css("font-size", "18px");
+
+
+                //input {background-color:lightblue}
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "lightgreen");
+            });
+
+           
+            $("p").on({
+                mouseenter: function()
+                {
+                    $(this).css("background-color", "lightblue");
+ 
+                },
+                mouseleave: function()
+                {
+                    $(this).css("background-color", "lightgreen");
+ 
+                },
+                click: function()
+                {
+                    $(this).css("background-color", "yellow");
+ 
+                },
+
+
+            });
+                
+            
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Use jQuery</h2>
+
+    <br>Course Code: <input type="text" name="coursecode">
+    <br><br> Course Name: <input type="text" name="coursename"><br>
+    <!-- Email: <input type="email" name="email"><br>
+    choices:  <input type = "radio" name = "choice" value "1"/> Web     
+     <input type = "radio" name = "choice" value "2"/> Java -->
+
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p>I hope you enjoy programming with jQuery</p>
+    <p id="test">jQuery is a powerful addition to JavaScript making our web pages more extensible</p>
+
+    <button class="btn1">Hide/Show Paragraphs</button>
+    <button class="btn2">Hide/Show Headings</button>
+    <button class="btn3">Hide/Show Last Paragraph</button>
+
+</body>
+
+</html>
