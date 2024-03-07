@@ -24,9 +24,7 @@ $(document).ready(function () {
         alert("Paragraph Text: " + $("#test").text());
     });
     $(".btn5").click(function () {
-        alert("course code : " + $("#code").val() + "course name: " + $("#name").val());
-
-        $("#p1").text("hi");
+       // alert("course code : " + $("#code").val() + "course name: " + $("#name").val());
         $("#p1").text("Course Code entered: " + $("#code").val());
        $("#p2").text("Course Name entered: " + $("#name").val());
         

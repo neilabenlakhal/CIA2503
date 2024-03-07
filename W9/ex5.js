@@ -24,7 +24,8 @@ $(document).ready(function () {
         alert("Paragraph Text: " + $("#test").text());
     });
     $(".btn6").click(function () {
-        $("#heading").addClass("blue");
+        $("#heading").addClass("blue"); // $("#heading").css("color", "blue");
+        $("#div1").toggleClass("important");
         
     });
     $(".btn5").click(function () {
@@ -33,6 +34,7 @@ $(document).ready(function () {
         $("#p1").text("Course Code entered: " + $("#code").val());
         $("#p2").text("Course Name entered: " + $("#name").val());
         $("#heading").append(" - "+ $("#student").val());  
+        $("#div1").remove();
 
     });
 });

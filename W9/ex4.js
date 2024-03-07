@@ -24,12 +24,16 @@ $(document).ready(function () {
         alert("Paragraph Text: " + $("#test").text());  // get
     });
     $(".btn5").click(function () {
-        alert("course code : " + $("#code").val() + "course name: " + $("#name").val());
+       // alert("course code : " + $("#code").val() + "course name: " + $("#name").val());
 
         $("#p1").text("Course Code entered: " + $("#code").val());  //set
         $("#p2").text("Course Name entered: " + $("#name").val());  //set
        $("#heading").append(" - "+ $("#student").val());
-     // $("#heading").text(" - "+ $("#student").val());   
+       $("#heading").css("color", "red");
+
+
+     // $("#heading").text(" - "+ $("#student").val());  
+
     //$("#div1").remove(); 
 
     });

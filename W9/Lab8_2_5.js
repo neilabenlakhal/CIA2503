@@ -23,6 +23,9 @@ class on the <h2> element.
  to ask the user for a color name and changes the background color of the <div> with the ID div1 
  to the color entered by the user.
 
+
+
+
  8-Add a button "Hide/Show Div" that toggles the visibility of the <div> 
  with the ID div1 when clicked.
 
@@ -42,11 +45,11 @@ $(".btn7").click(function(){
 
  Solution:2
 $(".btn8").click(function(){
-    $("#div1 p:last").hide();
+    $("#test").hide();
 });
 
 // Solution:3
-$(".btn10").click(function(){
+$(".btn8").click(function(){
     $("#div1").append("<p>New Paragraph</p>");
 });
 
@@ -89,73 +92,96 @@ $(".btn16").click(function(){
     $("#fn, #cc, #cn").val("");
 });
 
+
+7- Create a button "Prompt and Change Background" that, when clicked, uses prompt()
+ to ask the user for a color name and changes the background color of the <div> with the ID div1 
+ to the color entered by the user.
+
+
 */
-window.onload = function() {
-    $(function(){ alert("jQuery + DOM loaded."); });
+window.onload = function () {
+  $(function () { alert("jQuery + DOM loaded."); });
 }
-$(document).ready(function(){
-  $(".btn1").click(function(){
+$(document).ready(function () {
+  $(".btn1").click(function () {
     $("p").toggle();
   });
-   $(".btn2").click(function(){
+
+  $(".btn20").click(function () {
+    var color = prompt ("please enter color ");
+    $("#div1").css("background-color", color);
+
+  });
+  $(".btn7").click(function () {
+    $("#div1").remove(); //h1 h2 h3 h4 ... h6 img b span div footer section  form ul li ...
+  });
+
+  // Solution:3
+  $(".btn8").click(function () {
+    $("#div1").append("<p>New Paragraph</p>");
+  });
+
+  $(".btn2").click(function () {
     $("h2").toggle();
-  });    
-  $(".btn3").click(function(){
+  });
+  $(".btn3").click(function () {
     $("#test").toggle();
-  });   
-  $("input").focus(function(){
+  });
+  // Solution:6
+  $(".btn13").click(function () {
+    $("h2").toggleClass("blue");
+  });
+
+  $("input").focus(function () {
     $(this).css("background-color", "lightblue");
   });
-  $("input").blur(function(){
-    $(this).css("background-color", "lightgreen"); 
+  $("input").blur(function () {
+    $(this).css("background-color", "lightgreen");
     // document.getElementById("fn"). style.backgroundColor ="lightgreen";
     //DOM+JS document
   });
-  $(".btn4").click(function(){
+  $(".btn4").click(function () {
     alert("Paragraph Text: " + $("#test").text());
-  }); 
-  $(".btn5").click(function(){
-    alert("Course Code: " + $("#cc").val() + " Course Name: " + $("#cn").val());
-    $("#p1").text("Course Code entered: "+ $("#cc").val()); 
-    $("#p2").text("Course Name entered: "+ $("#cn").val());  
-    $("#heading1").append(" - "+ $("#fn").val()); 
-    $("#div1").remove();
-    
   });
-  $(".btn6").click(function(){
-    $("h2,#p1,#p2").addClass("blue");
-    $("div").addClassClass("important");
-  }); 
-
-  $(".btn7").click(function(){
+  $(".btn5").click(function () {
+    alert("Course Code: " + $("#cc").val() + " Course Name: " + $("#cn").val());
+    $("#p1").text("Course Code entered: " + $("#cc").val());
+    $("#p2").text("Course Name entered: " + $("#cn").val());
+    $("#heading1").append(" - " + $("#fn").val());
     $("#div1").remove();
-   
-  }); 
 
-  $(".btn13").click(function(){
-    $("#testing").addClass("important");
-});
-    
+  });
+  $(".btn6").click(function () {
+    $("h2,#p1,#p2").addClass("blue");
+    $("div").addClass("important");
+  });
 
-  $(".btn11").click(function(){
-    $("#testing").removeClass("important");
-});
+  $(".btn7").click(function () {
+    $("#div1").remove();
 
- // $("div").find("span").css({"color":"red"});
- // $("div").children().css({"color":"red"});
-   
- // Solution: 9
-$(".btn15").click(function(){
-  $("#fn, #cc, #cn").val("");
-});
+  });
+
+ 
+
+  $(".btn11").click(function () {
+    $("#div1").removeClass("important");
+  });
+
+  // $("div").find("span").css({"color":"red"});
+  // $("div").children().css({"color":"red"});
+
+  // Solution: 9
+  $(".btn15").click(function () {
+    $("#fn, #cc, #cn").val("Hi");
+  });
 
 
 
- $(".btn14").click(function(){
-  var userColor = prompt("Enter a color name:");
-  if (userColor) {
+  $(".btn14").click(function () {
+    var userColor = prompt("Enter a color name:");
+    if (userColor) {
       $("#div1").css("background-color", userColor);
-  }
-});
-    
+    }
+  });
+
 });
