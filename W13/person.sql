@@ -1,0 +1,10 @@
+USE mydb;
+
+CREATE TABLE person (
+name VARCHAR(255), 
+address VARCHAR(255)
+
+);
+
+ALTER TABLE person
+ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY;

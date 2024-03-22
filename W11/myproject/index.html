@@ -1,0 +1,127 @@
+
+<!-- 
+    What we will learn ?
+CLO4: Create dynamic web applications using Node.js Modules and Frameworks
+• Create Node.js modules and express code modularity in an application
+• Introduce Express.js and HTTP request/response Objects.
+• Build an HTTP server using the core modules in Node.js
+• Create web forms on an HTML page and receive the data in a Node.js script on the server.
+• Validate form data using Node.js module
+
+What is node.js ?
+
+Node.js is a server-side JavaScript runtime environment that 
+allows you to build web applications using JavaScript. 
+It was first released in 2009 and has since gained a lot of popularity in 
+the web development community.
+ Node.js is built on top of the V8 JavaScript engine from Google, 
+ which is also used in the Google Chrome web browser.
+
+One of the main advantages of using Node.js for web development
+ is that it allows you to use the same language for both the client-side 
+ and server-side of your application. 
+ This can simplify your development workflow and make it easier to share code 
+ between the two sides of your application.
+
+ Node.js also has a lot of built-in features for building web applications, 
+ including an HTTP server, a file system module, and support for streams and buffers.
+
+
+1- Setting up a Node.js environment
+
+To get started with Node.js, you first need to set up a Node.js 
+environment on your computer. Here are the steps you need to follow:
+
+Download and install Node.js from the official Node.js website.
+
+https://nodejs.org/en/download
+
+Verify that Node.js is installed by running the following command in your terminal or 
+command prompt:
+
+node --version
+
+Create a new Node.js project by creating a new directory and running the following command 
+in your terminal or command prompt:
+
+npm init
+
+This will prompt you to enter some information about your project and 
+create a package.json file in your project directory.
+
+what is NPM ?
+
+NPM (Node Package Manager) is the default package manager for Node.js and 
+allows you to easily install and manage third-party packages and modules 
+for your Node.js projects.
+
+What is a module ?
+In Node.js, a module is like a small package of code that performs a specific task,
+ such as reading files, making HTTP requests, etc. 
+ Modules help keep your code organized and can be 
+ reused in different parts of your Node.js application, 
+ making it more efficient and easier to manage.
+
+NPM also allows you to specify dependencies for your Node.js projects 
+in the package.json file (called also manifest). This makes it easy to share your projects 
+with others and ensures that all dependencies are installed correctly
+ when someone else tries to run your project.
+ 
+
+-->
+
+
+ <!-- Create a new file called index.html with the following contents: -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Node.js Page</title>
+  </head>
+  <body>
+    <h1>Hello from Node.js!</h1>
+    <h1> Another update from node!</h1>
+  </body>
+</html>
+
+
+<!-- Create a new file called server.js with the following contents:
+
+// Import the built-in 'http' and 'fs' modules
+const http = require('http');
+const fs = require('fs');
+
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    // If the request URL is '/', read the contents of 'index.html' and send it as the response
+    fs.readFile('./index.html', (err, data) => {
+      if (err) {
+        // If there's an error reading the file, send a 500 response with an error message
+        res.writeHead(500);
+        res.end('Error loading index.html');
+      } else {
+        // If the file is read successfully, send a 200 response with the file contents as the response body
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.end(data);
+      }
+    });
+  } else {
+    // If the request URL is anything other than '/', send a 404 response
+    res.writeHead(404);
+    res.end('Page not found');
+  }
+});
+
+// Start the server and listen for incoming requests on port 3000
+server.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+
+
+
+Start the server by running the following command:  node server.js
+
+access the page from : http://localhost:3000/
+
+-->
