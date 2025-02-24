@@ -26,7 +26,7 @@ function Validate() {
 	var lunch = document.getElementById("lunch");
 	var dinner = document.getElementById("dinner");
 	var result = true;
-	var regFname =/^[a-zA-Z ]{10}$/; //Regular expression
+	var regFname =/^[a-zA-Z ]{10,}$/; //Regular expression
 	if (regFname.test(fullname) == false) {
 		document.getElementById("fnameError").innerHTML = "Must be at least 10 letters, spaces allowed";
 		result = false;
